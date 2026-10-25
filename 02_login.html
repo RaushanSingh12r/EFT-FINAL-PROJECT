@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SignBridge | Log in</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&family=Noto+Sans+Tamil:wght@400;600;700&family=Noto+Sans+Telugu:wght@400;600;700&family=Noto+Sans+Kannada:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="05_style.css">
+  <link rel="stylesheet" href="06_finish.css">
+  <link rel="stylesheet" href="07_auth.css">
+</head>
+<body class="auth-body">
+  <header class="topbar">
+    <a class="brand" href="01_index.html"><span class="brand-icon">S</span> SignBridge</a>
+    <div class="header-right"><span id="langSlot"></span><span id="authSlot"></span></div>
+  </header>
+  <main class="auth-wrap">
+    <div class="auth-card">
+      <a class="back-link" href="01_index.html" data-i18n="auth_back">← Back to home</a>
+      <h1 data-i18n="login_title">Welcome back</h1>
+      <p class="auth-sub" data-i18n="login_sub">Log in to continue learning with SignBridge.</p>
+
+      <p class="role-label" data-i18n="role_label">Log in as</p>
+      <div class="role-tabs" role="tablist">
+        <button type="button" class="role-tab active" role="tab" aria-selected="true" data-role="user" data-i18n="role_user">User</button>
+        <button type="button" class="role-tab" role="tab" aria-selected="false" data-role="admin" data-i18n="role_admin">Admin</button>
+      </div>
+
+      <form id="loginForm" novalidate>
+        <label for="email" data-i18n="f_email">Email</label>
+        <input id="email" type="email" autocomplete="email" required>
+        <label for="password" data-i18n="f_pass">Password</label>
+        <input id="password" class="pw" type="password" autocomplete="current-password" required>
+        <label class="check"><input type="checkbox" class="pw-toggle"> <span data-i18n="f_show">Show password</span></label>
+        <p id="authMsg" class="auth-msg" role="alert" aria-live="polite"></p>
+        <button class="button button-primary full" type="submit" data-i18n="login_btn">Log in</button>
+      </form>
+
+      <p class="demo-note" id="adminDemo" hidden data-i18n="admin_demo">Demo admin: admin@signbridge.com / admin123</p>
+      <p class="switch-line" id="signupLine"><span data-i18n="to_signup">New here?</span> <a href="03_signup.html" data-i18n="signup">Sign up</a></p>
+      <p class="demo-note" data-i18n="demo_note">Demo only: accounts are stored in this browser, not on a server.</p>
+    </div>
+  </main>
+  <script src="08_i18n.js"></script>
+  <script src="09_auth.js"></script>
+  <script src="12_auth-pages.js"></script>
+</body>
+</html>
